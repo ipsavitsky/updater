@@ -1,0 +1,29 @@
+#+title: Automatically update all system dependencies
+
+* Does it work?
+This script is for updating my current Ubuntu setup - it is very personalized and makes a few assumptions
+- Only the following generic package managers are used:
+  - Apt
+  - Nix (as a profile manager)
+  - Flatpak
+- Go binaries are installed with ~go~ and updated with [[https://github.com/nao1215/gup][~gup~]]
+- Rust is installed with ~rustup~
+- Rust binaries are installed with ~cargo~ and updated with [[https://github.com/nabijaczleweli/cargo-update][~cargo install-update~]]
+- Python programs are installed with [[https://github.com/pypa/pipx][~pipx~]]
+- Javascript programs are installed with [[https://bun.sh/][~bun~]]
+- Haskell is installed with ~ghcup~
+- Haskell binaries are managed through ~cabal~
+- Emacs uses ~doom~
+* Dependencies
+- nix
+- flatpak
+- rustup
+- ghcup
+- go
+- gup
+- pipx
+- bun
+- emacs + doom
+* Todo
+- Figure something up to speed up cabal install
+- Automatically install new go versions
