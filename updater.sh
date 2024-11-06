@@ -17,9 +17,9 @@ ghcup install cabal latest
 ghcup install hls latest
 ghcup install stack latest
 
-# cabal update
-# #TODO: somehow get this list ourselves?
-# cabal install -j hoogle pandoc-cli
+cabal v2-update -j
+#TODO: somehow get this list ourselves?
+cabal v2-install --overwrite-policy=prompt -j hoogle pandoc-cli
 
 gup update
 
