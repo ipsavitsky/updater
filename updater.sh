@@ -1,3 +1,5 @@
+set -o xtrace
+
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt autoremove -y
@@ -19,7 +21,7 @@ ghcup install stack latest
 
 cabal v2-update -j
 #TODO: somehow get this list ourselves?
-cabal v2-install --overwrite-policy=prompt -j hoogle pandoc-cli
+cabal v2-install --overwrite-policy=always -j hoogle pandoc-cli
 
 gup update
 
@@ -28,5 +30,4 @@ pipx upgrade-all
 bun upgrade
 bun update --global
 
-doom upgrade
-doom sync
+doom upgrade --aot -! -j "$(nproc)"
